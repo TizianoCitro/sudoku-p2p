@@ -53,8 +53,14 @@ public class Sudoku {
      */
     public int placeNumber(int row, int column, int number) {
         // Number already placed
-        if (grid.getCellNumber(row, column) != EMPTY_CELL) {
-            return NUMBER_ALREADY_PLACED.getScore();
+        int cellNumber = grid.getCellNumber(row, column);
+        if (cellNumber != EMPTY_CELL) {
+            // If it's placed but the given number is correct, then it returns 0.
+            if (cellNumber == number) {
+                return NUMBER_ALREADY_PLACED.getScore();
+            }
+            // If it's placed but the given number is incorrect, then it returns -1.
+            return INCORRECT_NUMBER.getScore();
         }
 
         // Number to place is correct

@@ -37,6 +37,7 @@ import static it.unisa.studenti.citro.tiziano.utils.GameUtils.isGameValid;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
  * A P2P Sudoku challenge games. Each user can place a number of the
  * sudoku game, if it is not already placed takes 1 point, if it is already placed and it is rights takes
  * 0 point, in other case receive -1 point. The games is based on 9 x 9 matrix.

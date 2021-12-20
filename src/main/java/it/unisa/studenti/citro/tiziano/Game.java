@@ -212,7 +212,7 @@ public class Game {
             terminal.printf("\nCannot leave the network. Please try again.\n");
             return;
         }
-        terminal.printf("\nNetwork left successfully\n");
+        terminal.printf("\nNetwork left successfully.\n");
         System.exit(0);
     }
 

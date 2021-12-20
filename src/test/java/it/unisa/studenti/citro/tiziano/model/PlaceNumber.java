@@ -36,13 +36,19 @@ public class PlaceNumber {
                         }
                         break;
                     case 1:
-                        placeNumber = getCorrectNumber(sudoku, i, j, cellNumber);
+                        placeNumber = getAlreadyPlacedNumberButIncorrect(sudoku, i, j, cellNumber);
                         if (placeNumber != null) {
                             return placeNumber;
                         }
                         break;
                     case 2:
-                        placeNumber = getWrongNumber(sudoku, i, j, cellNumber);
+                        placeNumber = getCorrectNumber(sudoku, i, j, cellNumber);
+                        if (placeNumber != null) {
+                            return placeNumber;
+                        }
+                        break;
+                    case 3:
+                        placeNumber = getIncorrectNumber(sudoku, i, j, cellNumber);
                         if (placeNumber != null) {
                             return placeNumber;
                         }
@@ -64,6 +70,26 @@ public class PlaceNumber {
     private static PlaceNumber getAlreadyPlacedNumber(int i, int j, int cellNumber) {
         if (cellNumber != EMPTY_CELL) {
             return new PlaceNumber(i + 1, j + 1, cellNumber);
+        }
+        return null;
+    }
+
+    /**
+     * Retrieves a number that has already been placed but incorrect.
+     * @param sudoku is the sudoku where the number has to be placed.
+     * @param i is the row for the number.
+     * @param j is the column for the number.
+     * @param cellNumber is the number in the identified cell.
+     * @return the number to place.
+     */
+    private static PlaceNumber getAlreadyPlacedNumberButIncorrect(Integer[][] sudoku, int i, int j, int cellNumber) {
+        if (cellNumber != EMPTY_CELL) {
+            for (int col = 0; col < TOTAL_BLOCK_NUMBER; col++) {
+                int number = sudoku[i][col];
+                if (number != EMPTY_CELL && number != cellNumber) {
+                    return new PlaceNumber(i + 1, j + 1, number);
+                }
+            }
         }
         return null;
     }
@@ -96,14 +122,14 @@ public class PlaceNumber {
     }
 
     /**
-     * Retrieves a number that when placed will result in a wrong attempt.
+     * Retrieves a number that when placed will result in a incorrect attempt.
      * @param sudoku is the sudoku where the number has to be placed.
      * @param i is the row for the number.
      * @param j is the column for the number.
      * @param cellNumber is the number in the identified cell.
      * @return the number to place.
      */
-    private static PlaceNumber getWrongNumber(Integer[][] sudoku, int i, int j, int cellNumber) {
+    private static PlaceNumber getIncorrectNumber(Integer[][] sudoku, int i, int j, int cellNumber) {
         if (cellNumber == EMPTY_CELL) {
             for (int col = 0; col < TOTAL_BLOCK_NUMBER; col++) {
                 int number = sudoku[i][col];

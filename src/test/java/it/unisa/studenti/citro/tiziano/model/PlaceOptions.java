@@ -7,8 +7,9 @@ import lombok.Getter;
  */
 public enum PlaceOptions {
     ALREADY_PLACED(0),
-    CORRECT(1),
-    WRONG(2);
+    ALREADY_PLACED_BUT_INCORRECT(1),
+    CORRECT(2),
+    WRONG(3);
 
     PlaceOptions(int option) {
         this.option = option;

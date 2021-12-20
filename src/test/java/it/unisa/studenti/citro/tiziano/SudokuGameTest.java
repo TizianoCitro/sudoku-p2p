@@ -16,7 +16,9 @@ import java.util.List;
 
 import static it.unisa.studenti.citro.tiziano.model.PlaceNumber.getPlaceNumber;
 import static it.unisa.studenti.citro.tiziano.model.PlaceOptions.*;
+import static it.unisa.studenti.citro.tiziano.sudoku.model.Grid.FIRST;
 import static it.unisa.studenti.citro.tiziano.sudoku.utils.Scores.*;
+import static it.unisa.studenti.citro.tiziano.sudoku.utils.SudokuUtils.ERROR_WHILE_PLACING_NUMBER;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -27,7 +29,7 @@ public class SudokuGameTest {
 
     /**
      * Tests the generation of a new Sudoku game by a peer
-     * and the subsequent joining by other peers.
+     * and the subsequent joining of other peers.
      */
     @Test
     @Order(1)
@@ -40,7 +42,7 @@ public class SudokuGameTest {
     }
 
     /**
-     * tests the generation of a duplicated game.
+     * Tests the generation of a duplicated game.
      */
     @Test
     @Order(2)
@@ -142,8 +144,9 @@ public class SudokuGameTest {
     }
 
     /**
-     * Test the functionality of placing a number
-     * when the peer tries to place a number that has already been placed.
+     * Tests the functionality of placing a number
+     * when the peer tries to place a number that has already been placed
+     * and the number tried is correct.
      */
     @Test
     @Order(12)
@@ -163,7 +166,7 @@ public class SudokuGameTest {
     }
 
     /**
-     * Test the functionality of placing a number
+     * Tests the functionality of placing a number
      * when the peer tries to place a correct number.
      */
     @Test
@@ -178,30 +181,83 @@ public class SudokuGameTest {
 
         PlaceNumber placeNumber = getPlaceNumber(sudoku, CORRECT.getOption());
         assertNotNull(placeNumber, "Cannot get number to place");
-        Integer score = peer3.placeNumber(CORRECT_PLACED_GAME,
-                placeNumber.getRow(), placeNumber.getColumn(), placeNumber.getNumber());
+        int row = placeNumber.getRow();
+        int column = placeNumber.getColumn();
+        int number = placeNumber.getNumber();
+        Integer score = peer3.placeNumber(CORRECT_PLACED_GAME, row, column, number);
         assertEquals(CORRECT_NUMBER.getScore(), score);
+
+        // Verifying that all peers have the placed number.
+        Integer[][] peer2Sudoku = peer2.getSudoku(CORRECT_PLACED_GAME);
+        assertEquals(number, peer2Sudoku[row - 1][column -1]);
+        Integer[][] peer3Sudoku = peer3.getSudoku(CORRECT_PLACED_GAME);
+        assertEquals(number, peer3Sudoku[row - 1][column -1]);
+        Integer[][] peer4Sudoku = peer4.getSudoku(CORRECT_PLACED_GAME);
+        assertEquals(number, peer4Sudoku[row - 1][column -1]);
     }
 
     /**
-     * Test the functionality of placing a number
-     * when the peer tries to place a wrong number.
+     * Tests the functionality of placing a number
+     * when the peer tries to place a incorrect number.
      */
     @Test
     @Order(14)
-    public void placeWrongNumber() {
-        Integer[][] sudoku = peer2.generateNewSudoku(WRONG_PLACED_GAME);
+    public void placeIncorrectNumber() {
+        Integer[][] sudoku = peer2.generateNewSudoku(INCORRECT_PLACED_GAME);
         assertNotNull(sudoku, "PEER-TWO created a game for placing numbers");
-        assertTrue(peer1.join(WRONG_PLACED_GAME, PEER_ONE), "PEER-ONE has joined the game GAME");
-        assertTrue(peer2.join(WRONG_PLACED_GAME, PEER_TWO), "PEER-TWO has joined the game GAME");
-        assertTrue(peer3.join(WRONG_PLACED_GAME, PEER_THREE), "PEER-THREE has joined the game GAME");
-        assertTrue(peer4.join(WRONG_PLACED_GAME, PEER_FOUR), "PEER-FOUR has joined the game GAME");
+        assertTrue(peer1.join(INCORRECT_PLACED_GAME, PEER_ONE), "PEER-ONE has joined the game GAME");
+        assertTrue(peer2.join(INCORRECT_PLACED_GAME, PEER_TWO), "PEER-TWO has joined the game GAME");
+        assertTrue(peer3.join(INCORRECT_PLACED_GAME, PEER_THREE), "PEER-THREE has joined the game GAME");
+        assertTrue(peer4.join(INCORRECT_PLACED_GAME, PEER_FOUR), "PEER-FOUR has joined the game GAME");
 
         PlaceNumber placeNumber = getPlaceNumber(sudoku, WRONG.getOption());
         assertNotNull(placeNumber, "Cannot get number to place");
-        Integer score = peer2.placeNumber(WRONG_PLACED_GAME,
+        Integer score = peer2.placeNumber(INCORRECT_PLACED_GAME,
                 placeNumber.getRow(), placeNumber.getColumn(), placeNumber.getNumber());
         assertEquals(INCORRECT_NUMBER.getScore(), score);
+    }
+
+    /**
+     * Tests the functionality of placing a number
+     * when the peer tries to place a number that has already been placed,
+     * but the tried number is incorrect.
+     */
+    @Test
+    @Order(15)
+    public void alreadyPlacedNumberButIncorrect() {
+        Integer[][] sudoku = peer1.generateNewSudoku(ALREADY_PLACED_INCORRECT_GAME);
+        assertNotNull(sudoku, "PEER-ONE created a game for placing numbers");
+        assertTrue(peer1.join(ALREADY_PLACED_INCORRECT_GAME, PEER_ONE), "PEER-ONE has joined the game GAME");
+        assertTrue(peer2.join(ALREADY_PLACED_INCORRECT_GAME, PEER_TWO), "PEER-TWO has joined the game GAME");
+        assertTrue(peer3.join(ALREADY_PLACED_INCORRECT_GAME, PEER_THREE), "PEER-THREE has joined the game GAME");
+        assertTrue(peer4.join(ALREADY_PLACED_INCORRECT_GAME, PEER_FOUR), "PEER-FOUR has joined the game GAME");
+
+        PlaceNumber placeNumber = getPlaceNumber(sudoku, ALREADY_PLACED_BUT_INCORRECT.getOption());
+        assertNotNull(placeNumber, "Cannot get number to place");
+        Integer score = peer1.placeNumber(ALREADY_PLACED_INCORRECT_GAME,
+                placeNumber.getRow(), placeNumber.getColumn(), placeNumber.getNumber());
+        assertEquals(INCORRECT_NUMBER.getScore(), score);
+    }
+
+
+    /**
+     * Tests that a peer cannot place a number in a game that has not joined yet.
+     */
+    @Test
+    @Order(16)
+    public void placeNumberInNotJoinedGame() {
+        assertEquals(ERROR_WHILE_PLACING_NUMBER, peer3.placeNumber(GAME, FIRST, FIRST, FIRST),
+                "PEER-THREE has tried to place a number in a game that has not joined yet");
+    }
+
+    /**
+     * Tests that a peer cannot place a number in a game that does not exist.
+     */
+    @Test
+    @Order(17)
+    public void placeNumberInNotExistingGame() {
+        assertEquals(ERROR_WHILE_PLACING_NUMBER, peer4.placeNumber(NOT_EXISTING_GAME, FIRST, FIRST, FIRST),
+                "PEER-FOUR has tried to place a number in a game that does not exist");
     }
 
     /**
@@ -260,9 +316,10 @@ public class SudokuGameTest {
      */
     public static final String GAME = "GAME";
     public static final String NOT_EXISTING_GAME = "NOT_EXISTING";
-    public static final String WRONG_PLACED_GAME = "WRONG_PLACED";
+    public static final String INCORRECT_PLACED_GAME = "INCORRECT_PLACED";
     public static final String CORRECT_PLACED_GAME = "CORRECT_PLACED";
     public static final String ALREADY_PLACED_GAME = "ALREADY_PLACED";
+    public static final String ALREADY_PLACED_INCORRECT_GAME = "ALREADY_PLACED_INCORRECT";
 
     /**
      * Nicknames for the peers used for testing purposes.

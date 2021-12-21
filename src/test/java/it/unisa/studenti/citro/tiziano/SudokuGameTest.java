@@ -84,7 +84,7 @@ public class SudokuGameTest {
     }
 
     /**
-     * Test that no games is retrieved when the peer has not joined a game yet.
+     * Tests that no games is retrieved when the peer has not joined a game yet.
      */
     @Test
     @Order(6)
@@ -106,7 +106,7 @@ public class SudokuGameTest {
     }
 
     /**
-     * Test that the game grid is not retrieved when the peer has not joined the game yet.
+     * Tests that the game grid is not retrieved when the peer has not joined the game yet.
      */
     @Test
     @Order(8)
@@ -146,7 +146,7 @@ public class SudokuGameTest {
     /**
      * Tests the functionality of placing a number
      * when the peer tries to place a number that has already been placed
-     * and the number tried is correct.
+     * and the tried number is correct.
      */
     @Test
     @Order(12)
@@ -198,7 +198,7 @@ public class SudokuGameTest {
 
     /**
      * Tests the functionality of placing a number
-     * when the peer tries to place a incorrect number.
+     * when the peer tries to place an incorrect number.
      */
     @Test
     @Order(14)

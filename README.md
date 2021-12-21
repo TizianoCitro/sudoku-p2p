@@ -1,13 +1,20 @@
-# A P2P-based Sudoku game
-<h5>
+# A P2P Sudoku Game
+<h4>
     Tiziano Citro <br>
     t.citro5@studenti.unisa.it <br>
     Repository GitHub: https://github.com/TizianoCitro/sudoku-p2p
+</h4>
+<h5>
+    String used to compute the homework ID: tizianocitro-29 <br>
+    Computed string: d1435476d58ec4af01d52b7d85143698 <br>
+    Character: d <br>
+    Value: 4 <br>
+    Project: Sudoku Game
 </h5>
 
 ## Application
-A P2P-based Sudoku challenge game. Each user can place a number of the sudoku game and if the number is not already placed the user takes 1 point. If it is already placed and it is right, the user takes
-0 point, but in any other scenario the user loses -1 point. Users join games based on a 9 x 9 matrix, where all users that join a game are automatically notified whenever a user increment their score by placing a correct number and when the game is completed.
+A P2P Sudoku challenge game. Each user can place a number of the sudoku game and if the number is not already placed the user takes 1 point. If it is already placed and it is right, the user takes
+0 point, but in any other scenario the user loses 1 point. Users join games based on a 9 x 9 matrix, where all users who join a game are automatically notified whenever other users increment their score by placing a correct number and also when the game is completed.
 
 ## Functionalities
 The application provides the functionalities described by the `SudokuGame` interface to each peer that connects to the network.
@@ -40,17 +47,17 @@ When starting the application, to the user will be prompt the menu from which th
 It allows users to create a new Sudoku game by providing a name for it, in a way that the name has to be unique.
 If it is not, then users won't be able to create the game.
 
-From the menu, we can digit `1` and then enter the name they want for their game - `SUDOKU` in our case, thus they can create a new Sudoku game as following:
+From the menu, we can digit `1` and then enter the name we want for our game - `SUDOKU` in our case, thus we can create a new Sudoku game as following:
 
 <img src="media/GenerateNewSudoku.png">
 
-As you can see, the grid has some `X`, there is where you want to put your number, On how to do that, we will get there in a little while.
-We have yet to join the game we have just created.
+As you can see, the grid has some `X`, this is where you want to put your number. On how to do that, we will get there in a little while.
+We have yet to join the game we have just created. So, let's do it next.
 
 ### Join
-It allows users to join an already existing game by preventing them from joining a game that does not exist or a game that they have not joined already.
+It allows users to join an already existing game by preventing them from joining a game that does not exist, that they have already joined or a game that they have not joined yet.
 
-Let's try by joining the game we created just before. To do so, we can digit `2` and then enter the name of the game we want to join. 
+Let's try by joining the game we have created just before. To do so, we can digit `2` and then enter the name of the game we want to join. 
 That's not all, at this point we have to enter the nickname we want to join the game with.
 
 <img src="media/Join.png">
@@ -58,11 +65,11 @@ That's not all, at this point we have to enter the nickname we want to join the 
 ### Joined
 It provides to the users the possibility to see games that have already been joined. If users have not joined a game yet, nothing will be retrieved.
 
-We can see the game we have joined by simply digit `3`.
+We can see the games we have joined by simply digit `3`.
 
 <img src="media/Joined.png">
 
-### getSudoku
+### GetSudoku
 It can show the grid of the Sudoku game to the user, so the user can choose the number to place while visualizing the grid.
 
 Let's now see the grid of the game we have joined. To do so, we have to digit `4` and then enter the name of the game we have joined (`SUDOKU` in our case). 
@@ -71,10 +78,10 @@ Let's now see the grid of the game we have joined. To do so, we have to digit `4
 
 ### PlaceNumber
 It allows users to place a number on the grid of a Sudoku game that they have joined already. Otherwise, users will not be able to place numbers.
-When placing a number, if the number is not already placed the user takes 1 point. If it is already placed and it is right, the user takes 0 point, but in any other scenario the user loses -1 point.
+When placing a number, if the number is not already placed the user takes 1 point. If it is already placed and it is right, the user takes 0 point, but in any other scenario the user loses 1 point.
 
-Now it's the time to place a number in our Sudoku game and earn some points.
-Digit `5` and the enter the name of the game you want to place your number on.
+Now it's time to place a number in our Sudoku game and earn some points.
+Digit `5` and then enter the name of the game you want to place your number on.
 Using the above grid we're going to place the number `4` at row `6` and column `2`.
 
 <img src="media/PlaceNumber.png">
@@ -82,7 +89,7 @@ Using the above grid we're going to place the number `4` at row `6` and column `
 As you can see, we have just earned one point by placing the correct number.
 
 ### Leave
-It makes it possible for users to leave a game they have joined already.
+It makes it possible for users to leave a game they have joined already. Of course, they cannot leave games if they have not joined at least one game.
 
 Time is come to leave the game we have played on so far. So, let's digit `6` and choose the game we want to leave from the list of games that will be prompt to us.
 
@@ -97,9 +104,9 @@ Now that we have left the game, let's also leave the network. To do so digit `7`
 
 ## Solution
 The application has been developed in `Java` by using `Maven` to manage and resolve application dependencies.
-More in detail, the application uses several dependencies and most important are:
+More in detail, the application uses several dependencies and the most important are:
 - `TomP2P`: used to create and manage a Distributed HashTable (DHT) for enabling a peer-to-peer network, which each peer can join and then gain access to the resources stored in the DHT
-- `Junit`: used to achieve unit testing of the developed functionalities
+- `JUnit`: used to achieve unit testing of the developed functionalities
 - `TextIO`: used to manage the terminal for user interaction
 - `Lombok`: used to minimize the boilerplate while creating classes
 
@@ -130,8 +137,8 @@ The project is organized in two main folder: `src` and `test` as shown below:
 <img src="media/src.png">
 <img src="media/test.png">
 
-Let's go deep and provide a brief description on each package and class by diving more and more on the most important classes and functionalities.
-In any case, each class and method are documented through the Javadoc, so if you need more explanation, feel free to go and read the documentation.
+Let's go deep and provide a brief description of each package and class by diving more and more on the most important classes and functionalities.
+In any case, each class and method is documented through the Javadoc, so if you need more explanation, feel free to go and read the documentation.
 
 ## SRC
 Let's start with the src folder which contains the code of the whole application.
@@ -157,8 +164,8 @@ In this package there are the most important classes, such as `SudokuGameImpl` o
 ### SudokuGame and SudokuGameImpl
 SudokuGame is the interface we presented in a previous paragraph and SudokuGameImpl is the class that implements this interface and provides the actual functionalities.
 It is responsible for managing the DHT where we store:
-- the sudoku game grid as a matrix of the number on it
-- the players that join a certain game, for allowing us to notify them by sending direct messages every time a player scores a point or when a game is completed
+- the sudoku game grid as a matrix of the numbers on it
+- the players that join a certain game, in order to allow us to notify them by sending direct messages every time a player scores a point or when a game is completed
 - the nicknames used by the players when they join a certain game
 - the scores of each player, thus we can keep track of them for showing the results when a game is completed
 
@@ -208,17 +215,17 @@ The model package is crucial because it provides the classes that model the obje
 The `Cell` class models a single cell in a grid, that is modelled by the `Grid` class. While, a whole game is modelled by the `Sudoku` class.
 
 ### Printer
-The printer package provides the `SudokuPrettyPrinter` class used to print the grid of the game for the use to interact with it.
+The printer package provides the `SudokuPrettyPrinter` class used to print the grid of the game for the user to interact with it.
 
 <img src="media/Printer.png">
 
-Example of a printed grid:
+Example of a printed grid for a Sudoku game:
 
 <img src="media/PrintedGrid.png">
 
 ### Utils
 Classes and enumerations in this package provides utility functionalities required to other classes to manage the effort.
-For example, `Scores` enumeration provides the point a user gain or loses after attempting to place a number.
+For example, `Scores` enumeration provides the point a user gains or loses after attempting to place a number.
 
 ### Verifier
 Both `SudokuVerifier` and `GridVerifier` provides method to verify the state of the game before and after user interaction.
@@ -234,11 +241,11 @@ We are going to go deeper in unit testing in the next paragraph.
 
 
 ## Unit testing
-The unit testing has been performed by using `Junit`.
+The unit testing has been performed with the use of `JUnit`.
 
 Tests are implemented in the "SudokuGameTest" class, in which each method of the `SudokuGame` interface (corresponding to the functionality of the application) is tested. 
-Each method used for testing purposes is annotated with `@Test`, a JUnit annotation that specifies that the method is running a test case.
-The order for test execution is described by the `@Order` annotation and for doing so, it is required to annotate the class as following:
+Each method used for testing purposes is annotated with `@Test`, a JUnit annotation which specifies that the method is running a test case.
+The order for test execution is described by the `@Order` annotation and for doing so, it is required to annotate the test class (in our case SudokuGameTest) as following:
 
 ```java
 @TestMethodOrder(OrderAnnotation.class)
@@ -259,8 +266,8 @@ public class SudokuGameTest {
 
 In this way the test case in firstTest method will be executed before the test case in secondTest method.
 
-Crucial is the method `setup` that runs before all test (as the `@BeforeAll` annotation suggests) and allows us to create the peers we're going to use for our test:
-While the `leaveNetwork` method cleans everything after all test are executed (`@AfterAll` annotation), the `leaveAllGames` method is executed after each test (`@AfteEach` annotation), so all peers we'll leave the games they have joined in the previous test. 
+Crucial is the method `setup` that runs before all test (as the `@BeforeAll` annotation suggests) and allows us to create the peers we're going to use for our tests.
+While the `leaveNetwork` method cleans everything after all tests are executed (`@AfterAll` annotation), the `leaveAllGames` method is executed after each test (`@AfteEach` annotation), so all peers we'll leave the games they have joined during the execution of the previous test. 
 ```java
 public class SudokuGameTest {
     
@@ -292,18 +299,119 @@ public class SudokuGameTest {
 
 Now that we have seen the overall configuration, let's go deep and see what each of the test actually does.
 
-### GenerateNewSudokuAndJoin
-Tests the creation of a new Sudoku game by a peer and the subsequent joining of other peers.
+## Test cases
+Let's go deeper into each of the test cases.
 
-### GenerateAlreadyExistingSudoku
+### Test 1: GenerateNewSudokuAndJoin
+Tests the creation of a new Sudoku game by a user and the subsequent joining of other users into the created game.
+
+### Test 2: GenerateAlreadyExistingSudoku
 Checks that a peer cannot create a new game which will be a duplicate of an already existing game, considering that each game is identified by the name.
 
-### JoinNotExistingGame
+### Test 3: JoinNotExistingGame
 Tests that it will not be possible for a user to join a game that does not exist.
 
-### JoinAlreadyJoinedGame
+### Test 4: JoinAlreadyJoinedGame
 Tests that it will not be possible for a user to join a game that he or she has joined already.
 
-### JoinedGames
+### Test 5: JoinedGames
 Checks the possibility for a user to retrieve the games that he or she has joined, in case at least one game has been joined.
 
+### Test 6: NotJoinedGamesYet
+Checks that no game is retrieved when users have not joined at least one game yet.
+
+### Test 7: GetSudokuWhenJoined
+Tests the possibility for a user to retrieve the grid of a joined Sudoku game when at least one game has been joined.
+
+### Test 8: GetSudokuWhenGameDoesNotExist
+Tests that the grid of a selected game is not retrieved when the user has not joined the game yet.
+
+### Test 9: LeaveGame
+Checks the possibility for a user to leave a game that he or she has joined previously.
+
+### Test 10: LeaveNotJoinedGame
+Tests that users cannot leave games that they have not joined.
+
+### Test 11: LeaveNotExistingGame
+Tests that users cannot leave games that do not exist.
+
+### Test 12: AlreadyPlacedNumber
+Tests the functionality of placing a number 
+when the user tries to place a number that has already been placed 
+and the tried number is correct. Thus, the user will receive 0 point.
+
+### Test 13: PlaceCorrectNumber
+Tests the functionality of placing a number 
+when the user tries to place a number and the number is correct, which means that
+the user will earn 1 point. Other users will be notified, so it tests that
+all users who have joined the game have the new number in the grid of the game maintaining the grid consistent.
+
+### Test 14: PlaceIncorrectNumber
+Tests the functionality of placing a number
+when the user tries to place a number and the number is incorrect, which results
+in the user losing 1 point.
+
+### Test 15: AlreadyPlacedNumberButIncorrect
+Tests the functionality of placing a number
+when the user tries to place a number that has already been placed,
+but the tried number is incorrect. Thus, the user will lose 1 point.
+
+### Test 16: PlaceNumberInNotJoinedGame
+Tests that users cannot place a number in a game that they have yet to join.
+
+### Test 17: PlaceNumberInNotExistingGame
+Checks that users cannot place a number in a game that does not exist.
+
+### Test results
+In order to run tests, run the following command:
+
+```bash
+mvn test
+```
+
+Here are the results:
+
+<img src="media/Results.png">
+
+## Containerization
+The application is provided with a `Dockerfile` that allows to build an image from which it becomes possible
+to launch a container with the application up and running.
+
+Here's the Dockerfile:
+
+```dockerfile
+FROM maven:3.5-jdk-8-alpine AS build
+COPY src /app/src
+COPY pom.xml /app/pom.xml
+WORKDIR /app
+RUN mvn clean package
+
+FROM openjdk:8-jre-alpine
+WORKDIR /app
+COPY --from=build /app/target/SudokuP2P-1-jar-with-dependencies.jar /app/SudokuP2P.jar
+ENV MASTERIP=127.0.0.1
+ENV ID=0
+CMD java -jar SudokuP2P.jar -m $MASTERIP -id $ID
+```
+
+### Launch the application with Docker
+Make sure you have Docker started and then digit the following command from the root of the project, where the Dockerfile is located:
+
+```bash
+docker build --no-cache -t sudoku-p2p .
+```
+
+When the build process finishes, run the following command to start a container with the `MASTER` peer:
+
+```bash
+docker run -i --name MASTER-PEER -e MASTERIP="127.0.0.1" -e ID=0 sudoku-p2p
+```
+
+And then run the following command to start a second peer (we are calling it `PEER-ONE`):
+
+
+```bash
+docker run -i --name PEER-ONE -e MASTERIP="172.17.0.2" -e ID=1 sudoku-p2p
+```
+
+Now you should be able to interact with the application and follow along with what we have done through the documentation, for example.

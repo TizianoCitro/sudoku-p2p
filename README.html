@@ -1,0 +1,1341 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    color:#333;
+    background:#fff;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+</style><title>README</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-a-p2p-sudoku-game" class="anchor" href="#a-p2p-sudoku-game" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A P2P Sudoku Game</h1>
+<h4>
+<a id="user-content-----tiziano-citro-----tcitro5studentiunisait-----repository-github-httpsgithubcomtizianocitrosudoku-p2p" class="anchor" href="#----tiziano-citro-----tcitro5studentiunisait-----repository-github-httpsgithubcomtizianocitrosudoku-p2p" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
+    Tiziano Citro <br>
+    t.citro5@studenti.unisa.it <br>
+    Repository GitHub: <a href="https://github.com/TizianoCitro/sudoku-p2p">https://github.com/TizianoCitro/sudoku-p2p</a>
+</h4>
+<h5>
+<a id="user-content-----string-used-to-compute-the-homework-id-tizianocitro-29-----computed-string-d1435476d58ec4af01d52b7d85143698-----character-d-----value-4-----project-sudoku-game" class="anchor" href="#----string-used-to-compute-the-homework-id-tizianocitro-29-----computed-string-d1435476d58ec4af01d52b7d85143698-----character-d-----value-4-----project-sudoku-game" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
+    String used to compute the homework ID: tizianocitro-29 <br>
+    Computed string: d1435476d58ec4af01d52b7d85143698 <br>
+    Character: d <br>
+    Value: 4 <br>
+    Project: Sudoku Game
+</h5>
+<h2>
+<a id="user-content-application" class="anchor" href="#application" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Application</h2>
+<p>A P2P Sudoku challenge game. Each user can place a number of the sudoku game and if the number is not already placed the user takes 1 point. If it is already placed and it is right, the user takes
+0 point, but in any other scenario the user loses 1 point. Users join games based on a 9 x 9 matrix, where all users who join a game are automatically notified whenever other users increment their score by placing a correct number and also when the game is completed.</p>
+<h2>
+<a id="user-content-functionalities" class="anchor" href="#functionalities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Functionalities</h2>
+<p>The application provides the functionalities described by the <code>SudokuGame</code> interface to each peer that connects to the network.</p>
+<div class="highlight highlight-source-java"><pre><span class="pl-k">public</span> <span class="pl-k">interface</span> <span class="pl-en">SudokuGame</span> {
+    
+	<span class="pl-k">Integer</span>[][] <span class="pl-en">generateNewSudoku</span>(<span class="pl-smi">String</span> <span class="pl-v">_game_name</span>);
+    
+	<span class="pl-k">boolean</span> <span class="pl-en">join</span>(<span class="pl-smi">String</span> <span class="pl-v">_game_name</span>, <span class="pl-smi">String</span> <span class="pl-v">_nickname</span>);
+
+	<span class="pl-k">List&lt;<span class="pl-smi">String</span>&gt;</span> <span class="pl-en">joined</span>();
+    
+	<span class="pl-k">Integer</span>[][] <span class="pl-en">getSudoku</span>(<span class="pl-smi">String</span> <span class="pl-v">_game_name</span>);
+    
+	<span class="pl-smi">Integer</span> <span class="pl-en">placeNumber</span>(<span class="pl-smi">String</span> <span class="pl-v">_game_name</span>, <span class="pl-k">int</span> <span class="pl-v">_i</span>, <span class="pl-k">int</span> <span class="pl-v">_j</span>, <span class="pl-k">int</span> <span class="pl-v">_number</span>);
+    
+	<span class="pl-k">boolean</span> <span class="pl-en">leave</span>(<span class="pl-smi">String</span> <span class="pl-v">_game_name</span>);
+    
+	<span class="pl-k">boolean</span> <span class="pl-en">leaveNetwork</span>();
+}</pre></div>
+<p>Let's see each of them more in detail.</p>
+<h3>
+<a id="user-content-menu" class="anchor" href="#menu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Menu</h3>
+<p>When starting the application, to the user will be prompt the menu from which the user can choose what to do.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Menu.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Menu.png" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-generatenewsudoku" class="anchor" href="#generatenewsudoku" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GenerateNewSudoku</h3>
+<p>It allows users to create a new Sudoku game by providing a name for it, in a way that the name has to be unique.
+If it is not, then users won't be able to create the game.</p>
+<p>From the menu, we can digit <code>1</code> and then enter the name we want for our game - <code>SUDOKU</code> in our case, thus we can create a new Sudoku game as following:</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/GenerateNewSudoku.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/GenerateNewSudoku.png" style="max-width:100%;"></a></p>
+<p>As you can see, the grid has some <code>X</code>, this is where you want to put your number. On how to do that, we will get there in a little while.
+We have yet to join the game we have just created. So, let's do it next.</p>
+<h3>
+<a id="user-content-join" class="anchor" href="#join" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Join</h3>
+<p>It allows users to join an already existing game by preventing them from joining a game that does not exist, that they have already joined or a game that they have not joined yet.</p>
+<p>Let's try by joining the game we have created just before. To do so, we can digit <code>2</code> and then enter the name of the game we want to join.
+That's not all, at this point we have to enter the nickname we want to join the game with.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Join.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Join.png" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-joined" class="anchor" href="#joined" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Joined</h3>
+<p>It provides to the users the possibility to see games that have already been joined. If users have not joined a game yet, nothing will be retrieved.</p>
+<p>We can see the games we have joined by simply digit <code>3</code>.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Joined.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Joined.png" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-getsudoku" class="anchor" href="#getsudoku" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GetSudoku</h3>
+<p>It can show the grid of the Sudoku game to the user, so the user can choose the number to place while visualizing the grid.</p>
+<p>Let's now see the grid of the game we have joined. To do so, we have to digit <code>4</code> and then enter the name of the game we have joined (<code>SUDOKU</code> in our case).</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/GetSudoku.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/GetSudoku.png" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-placenumber" class="anchor" href="#placenumber" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PlaceNumber</h3>
+<p>It allows users to place a number on the grid of a Sudoku game that they have joined already. Otherwise, users will not be able to place numbers.
+When placing a number, if the number is not already placed the user takes 1 point. If it is already placed and it is right, the user takes 0 point, but in any other scenario the user loses 1 point.</p>
+<p>Now it's time to place a number in our Sudoku game and earn some points.
+Digit <code>5</code> and then enter the name of the game you want to place your number on.
+Using the above grid we're going to place the number <code>4</code> at row <code>6</code> and column <code>2</code>.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/PlaceNumber.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/PlaceNumber.png" style="max-width:100%;"></a></p>
+<p>As you can see, we have just earned one point by placing the correct number.</p>
+<h3>
+<a id="user-content-leave" class="anchor" href="#leave" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Leave</h3>
+<p>It makes it possible for users to leave a game they have joined already. Of course, they cannot leave games if they have not joined at least one game.</p>
+<p>Time is come to leave the game we have played on so far. So, let's digit <code>6</code> and choose the game we want to leave from the list of games that will be prompt to us.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Leave.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Leave.png" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-leavenetwork" class="anchor" href="#leavenetwork" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LeaveNetwork</h3>
+<p>It makes it possible for users to leave the whole network and by doing so leaving all the games they had joined.</p>
+<p>Now that we have left the game, let's also leave the network. To do so digit <code>7</code>and enter <code>Y</code> to confirm.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/LeaveNetwork.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/LeaveNetwork.png" style="max-width:100%;"></a></p>
+<h2>
+<a id="user-content-solution" class="anchor" href="#solution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution</h2>
+<p>The application has been developed in <code>Java</code> by using <code>Maven</code> to manage and resolve application dependencies.
+More in detail, the application uses several dependencies and the most important are:</p>
+<ul>
+<li>
+<code>TomP2P</code>: used to create and manage a Distributed HashTable (DHT) for enabling a peer-to-peer network, which each peer can join and then gain access to the resources stored in the DHT</li>
+<li>
+<code>JUnit</code>: used to achieve unit testing of the developed functionalities</li>
+<li>
+<code>TextIO</code>: used to manage the terminal for user interaction</li>
+<li>
+<code>Lombok</code>: used to minimize the boilerplate while creating classes</li>
+</ul>
+<p>Dependencies are specified in the file pom.xml (Project Object Model). Some of them are shown in the following example:</p>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">dependency</span>&gt;
+    &lt;<span class="pl-ent">groupId</span>&gt;net.tomp2p&lt;/<span class="pl-ent">groupId</span>&gt;
+    &lt;<span class="pl-ent">artifactId</span>&gt;tomp2p-all&lt;/<span class="pl-ent">artifactId</span>&gt;
+    &lt;<span class="pl-ent">version</span>&gt;5.0-Beta8&lt;/<span class="pl-ent">version</span>&gt;
+&lt;/<span class="pl-ent">dependency</span>&gt;
+
+&lt;<span class="pl-ent">dependency</span>&gt;
+&lt;<span class="pl-ent">groupId</span>&gt;org.junit.jupiter&lt;/<span class="pl-ent">groupId</span>&gt;
+&lt;<span class="pl-ent">artifactId</span>&gt;junit-jupiter-engine&lt;/<span class="pl-ent">artifactId</span>&gt;
+&lt;<span class="pl-ent">version</span>&gt;5.5.2&lt;/<span class="pl-ent">version</span>&gt;
+&lt;/<span class="pl-ent">dependency</span>&gt;
+
+&lt;<span class="pl-ent">dependency</span>&gt;
+    &lt;<span class="pl-ent">groupId</span>&gt;org.projectlombok&lt;/<span class="pl-ent">groupId</span>&gt;
+    &lt;<span class="pl-ent">artifactId</span>&gt;lombok&lt;/<span class="pl-ent">artifactId</span>&gt;
+    &lt;<span class="pl-ent">version</span>&gt;LATEST&lt;/<span class="pl-ent">version</span>&gt;
+    &lt;<span class="pl-ent">optional</span>&gt;true&lt;/<span class="pl-ent">optional</span>&gt;
+&lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
+<p>The project is organized in two main folder: <code>src</code> and <code>test</code> as shown below:</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/src.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/src.png" style="max-width:100%;"></a></p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/test.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/test.png" style="max-width:100%;"></a></p>
+<p>Let's go deep and provide a brief description of each package and class by diving more and more on the most important classes and functionalities.
+In any case, each class and method is documented through the Javadoc, so if you need more explanation, feel free to go and read the documentation.</p>
+<h2>
+<a id="user-content-src" class="anchor" href="#src" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SRC</h2>
+<p>Let's start with the src folder which contains the code of the whole application.</p>
+<h3>
+<a id="user-content-game" class="anchor" href="#game" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Game</h3>
+<p>The class Game provides the main method that starts the whole application.
+It is also responsible for managing user interaction and performing the proper action to the corresponding user input, as well as showing results to the user in the proper way.</p>
+<h3>
+<a id="user-content-listener" class="anchor" href="#listener" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Listener</h3>
+<p>The listener package provides the interface <code>MessageListener</code> and the class <code>MessageListenerImpl</code>
+that provides the capability to listen for messages sent through the network.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Listener.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Listener.png" style="max-width:100%;"></a></p>
+<p>More in detail, the listener receives the messages peers sent on the network when scoring a point by placing the correct number on the grid of the game and when the game is completed.
+When a message is received, the listener just output it on terminal for the user to see.</p>
+<h3>
+<a id="user-content-sudoku" class="anchor" href="#sudoku" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sudoku</h3>
+<p>In this package there are the most important classes, such as <code>SudokuGameImpl</code> or <code>Sudoku</code> and so on.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Sudoku.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Sudoku.png" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-sudokugame-and-sudokugameimpl" class="anchor" href="#sudokugame-and-sudokugameimpl" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SudokuGame and SudokuGameImpl</h3>
+<p>SudokuGame is the interface we presented in a previous paragraph and SudokuGameImpl is the class that implements this interface and provides the actual functionalities.
+It is responsible for managing the DHT where we store:</p>
+<ul>
+<li>the sudoku game grid as a matrix of the numbers on it</li>
+<li>the players that join a certain game, in order to allow us to notify them by sending direct messages every time a player scores a point or when a game is completed</li>
+<li>the nicknames used by the players when they join a certain game</li>
+<li>the scores of each player, thus we can keep track of them for showing the results when a game is completed</li>
+</ul>
+<p>Let's see how we can interact with the DHT. In the following snippet we will show the <code>putSudoku</code> method that stores the grid of a Sudoku game in the DHT given a name for the game and the grid as a matrix of numbers.
+Then we will show the <code>retrieveSudoku</code> method that retrieves a grid from the DHT given the name of a game.</p>
+<div class="highlight highlight-source-java"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">SudokuGameImpl</span> <span class="pl-k">implements</span> <span class="pl-e">Sudoku</span> {
+    
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">private</span> <span class="pl-k">boolean</span> <span class="pl-en">putSudoku</span>(<span class="pl-smi">String</span> <span class="pl-v">_game_name</span>, <span class="pl-k">Integer</span>[][] <span class="pl-v">cellsNumbers</span>) {
+        <span class="pl-smi">FutureGet</span> futureGet <span class="pl-k">=</span> dht<span class="pl-k">.</span>get(<span class="pl-smi">Number160</span><span class="pl-k">.</span>createHash(_game_name))<span class="pl-k">.</span>start();
+        futureGet<span class="pl-k">.</span>awaitUninterruptibly();
+        <span class="pl-k">if</span> (futureGet<span class="pl-k">.</span>isSuccess()) {
+            dht<span class="pl-k">.</span>put(<span class="pl-smi">Number160</span><span class="pl-k">.</span>createHash(_game_name))
+                    .data(<span class="pl-k">new</span> <span class="pl-smi">Data</span>(cellsNumbers))
+                    .start()
+                    .awaitUninterruptibly();
+            <span class="pl-k">return</span> <span class="pl-c1">true</span>;
+        }
+        <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+    }
+
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">private</span> <span class="pl-k">Integer</span>[][] <span class="pl-en">retrieveSudoku</span>(<span class="pl-smi">String</span> <span class="pl-v">_game_name</span>) {
+        <span class="pl-smi">FutureGet</span> futureGet <span class="pl-k">=</span> dht<span class="pl-k">.</span>get(<span class="pl-smi">Number160</span><span class="pl-k">.</span>createHash(_game_name))<span class="pl-k">.</span>start();
+        futureGet<span class="pl-k">.</span>awaitUninterruptibly();
+        <span class="pl-k">if</span> (futureGet<span class="pl-k">.</span>isSuccess()) {
+            <span class="pl-k">if</span> (<span class="pl-k">!</span>futureGet<span class="pl-k">.</span>isEmpty()) {
+                <span class="pl-k">return</span> (<span class="pl-k">Integer</span>[][]) futureGet<span class="pl-k">.</span>dataMap()
+                        .values()
+                        .iterator()
+                        .next()
+                        .object();
+            }
+        }
+        <span class="pl-k">return</span> <span class="pl-c1">null</span>;
+    }
+}</pre></div>
+<h3>
+<a id="user-content-model" class="anchor" href="#model" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Model</h3>
+<p>The model package is crucial because it provides the classes that model the objects of the application domain.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Model.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Model.png" style="max-width:100%;"></a></p>
+<p>The <code>Cell</code> class models a single cell in a grid, that is modelled by the <code>Grid</code> class. While, a whole game is modelled by the <code>Sudoku</code> class.</p>
+<h3>
+<a id="user-content-printer" class="anchor" href="#printer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Printer</h3>
+<p>The printer package provides the <code>SudokuPrettyPrinter</code> class used to print the grid of the game for the user to interact with it.</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Printer.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Printer.png" style="max-width:100%;"></a></p>
+<p>Example of a printed grid for a Sudoku game:</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/PrintedGrid.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/PrintedGrid.png" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-utils" class="anchor" href="#utils" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Utils</h3>
+<p>Classes and enumerations in this package provides utility functionalities required to other classes to manage the effort.
+For example, <code>Scores</code> enumeration provides the point a user gains or loses after attempting to place a number.</p>
+<h3>
+<a id="user-content-verifier" class="anchor" href="#verifier" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Verifier</h3>
+<p>Both <code>SudokuVerifier</code> and <code>GridVerifier</code> provides method to verify the state of the game before and after user interaction.
+As example, they're responsible to check whether the insertion of a number is correct or not.</p>
+<h3>
+<a id="user-content-utils-1" class="anchor" href="#utils-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Utils</h3>
+<p>Finally, there's the utils package that provides utility classes and enumerations.
+Slightly more in detail, the <code>GameOptions</code> enum provides the options from which a user can choose what to do when the application is up and running.</p>
+<h2>
+<a id="user-content-test" class="anchor" href="#test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test</h2>
+<p>Let's address now the test folder which contains the <code>SudokuGameTest</code> class where all the unit tests for the application are written.
+We are going to go deeper in unit testing in the next paragraph.</p>
+<h2>
+<a id="user-content-unit-testing" class="anchor" href="#unit-testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Unit testing</h2>
+<p>The unit testing has been performed with the use of <code>JUnit</code>.</p>
+<p>Tests are implemented in the "SudokuGameTest" class, in which each method of the <code>SudokuGame</code> interface (corresponding to the functionality of the application) is tested.
+Each method used for testing purposes is annotated with <code>@Test</code>, a JUnit annotation which specifies that the method is running a test case.
+The order for test execution is described by the <code>@Order</code> annotation and for doing so, it is required to annotate the test class (in our case SudokuGameTest) as following:</p>
+<div class="highlight highlight-source-java"><pre><span class="pl-k">@TestMethodOrder</span>(<span class="pl-smi">OrderAnnotation</span><span class="pl-k">.</span>class)
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">SudokuGameTest</span> {
+
+    <span class="pl-k">@Test</span>
+    <span class="pl-k">@Order</span>(<span class="pl-c1">1</span>)
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">firstTest</span>() {
+    }
+
+    <span class="pl-k">@Test</span>
+    <span class="pl-k">@Order</span>(<span class="pl-c1">2</span>)
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">secondTest</span>() {
+        
+    }
+}</pre></div>
+<p>In this way the test case in firstTest method will be executed before the test case in secondTest method.</p>
+<p>Crucial is the method <code>setup</code> that runs before all test (as the <code>@BeforeAll</code> annotation suggests) and allows us to create the peers we're going to use for our tests.
+While the <code>leaveNetwork</code> method cleans everything after all tests are executed (<code>@AfterAll</code> annotation), the <code>leaveAllGames</code> method is executed after each test (<code>@AfteEach</code> annotation), so all peers we'll leave the games they have joined during the execution of the previous test.</p>
+<div class="highlight highlight-source-java"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">SudokuGameTest</span> {
+    
+    <span class="pl-k">@BeforeAll</span>
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">setup</span>() {
+        peer1 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">SudokuGameImpl</span>(<span class="pl-c1">0</span>, <span class="pl-c1">MASTER_IP</span>, <span class="pl-k">new</span> <span class="pl-smi">MessageListenerImpl</span>(<span class="pl-c1">0</span>));
+        peer2 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">SudokuGameImpl</span>(<span class="pl-c1">1</span>, <span class="pl-c1">MASTER_IP</span>, <span class="pl-k">new</span> <span class="pl-smi">MessageListenerImpl</span>(<span class="pl-c1">1</span>));
+        peer3 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">SudokuGameImpl</span>(<span class="pl-c1">2</span>, <span class="pl-c1">MASTER_IP</span>, <span class="pl-k">new</span> <span class="pl-smi">MessageListenerImpl</span>(<span class="pl-c1">2</span>));
+        peer4 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">SudokuGameImpl</span>(<span class="pl-c1">3</span>, <span class="pl-c1">MASTER_IP</span>, <span class="pl-k">new</span> <span class="pl-smi">MessageListenerImpl</span>(<span class="pl-c1">3</span>));
+    }
+
+    <span class="pl-k">@AfterAll</span>
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">leaveNetwork</span>() {
+        peer1<span class="pl-k">.</span>leaveNetwork();
+        peer2<span class="pl-k">.</span>leaveNetwork();
+        peer3<span class="pl-k">.</span>leaveNetwork();
+        peer4<span class="pl-k">.</span>leaveNetwork();
+    }
+
+    <span class="pl-k">@AfterEach</span>
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">leaveAllGames</span>() {
+        leaveGames(peer1);
+        leaveGames(peer2);
+        leaveGames(peer3);
+        leaveGames(peer4);
+    }
+}</pre></div>
+<p>Now that we have seen the overall configuration, let's go deep and see what each of the test actually does.</p>
+<h2>
+<a id="user-content-test-cases" class="anchor" href="#test-cases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test cases</h2>
+<p>Let's go deeper into each of the test cases.</p>
+<h3>
+<a id="user-content-test-1-generatenewsudokuandjoin" class="anchor" href="#test-1-generatenewsudokuandjoin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 1: GenerateNewSudokuAndJoin</h3>
+<p>Tests the creation of a new Sudoku game by a user and the subsequent joining of other users into the created game.</p>
+<h3>
+<a id="user-content-test-2-generatealreadyexistingsudoku" class="anchor" href="#test-2-generatealreadyexistingsudoku" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 2: GenerateAlreadyExistingSudoku</h3>
+<p>Checks that a peer cannot create a new game which will be a duplicate of an already existing game, considering that each game is identified by the name.</p>
+<h3>
+<a id="user-content-test-3-joinnotexistinggame" class="anchor" href="#test-3-joinnotexistinggame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 3: JoinNotExistingGame</h3>
+<p>Tests that it will not be possible for a user to join a game that does not exist.</p>
+<h3>
+<a id="user-content-test-4-joinalreadyjoinedgame" class="anchor" href="#test-4-joinalreadyjoinedgame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 4: JoinAlreadyJoinedGame</h3>
+<p>Tests that it will not be possible for a user to join a game that he or she has joined already.</p>
+<h3>
+<a id="user-content-test-5-joinedgames" class="anchor" href="#test-5-joinedgames" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 5: JoinedGames</h3>
+<p>Checks the possibility for a user to retrieve the games that he or she has joined, in case at least one game has been joined.</p>
+<h3>
+<a id="user-content-test-6-notjoinedgamesyet" class="anchor" href="#test-6-notjoinedgamesyet" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 6: NotJoinedGamesYet</h3>
+<p>Checks that no game is retrieved when users have not joined at least one game yet.</p>
+<h3>
+<a id="user-content-test-7-getsudokuwhenjoined" class="anchor" href="#test-7-getsudokuwhenjoined" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 7: GetSudokuWhenJoined</h3>
+<p>Tests the possibility for a user to retrieve the grid of a joined Sudoku game when at least one game has been joined.</p>
+<h3>
+<a id="user-content-test-8-getsudokuwhengamedoesnotexist" class="anchor" href="#test-8-getsudokuwhengamedoesnotexist" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 8: GetSudokuWhenGameDoesNotExist</h3>
+<p>Tests that the grid of a selected game is not retrieved when the user has not joined the game yet.</p>
+<h3>
+<a id="user-content-test-9-leavegame" class="anchor" href="#test-9-leavegame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 9: LeaveGame</h3>
+<p>Checks the possibility for a user to leave a game that he or she has joined previously.</p>
+<h3>
+<a id="user-content-test-10-leavenotjoinedgame" class="anchor" href="#test-10-leavenotjoinedgame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 10: LeaveNotJoinedGame</h3>
+<p>Tests that users cannot leave games that they have not joined.</p>
+<h3>
+<a id="user-content-test-11-leavenotexistinggame" class="anchor" href="#test-11-leavenotexistinggame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 11: LeaveNotExistingGame</h3>
+<p>Tests that users cannot leave games that do not exist.</p>
+<h3>
+<a id="user-content-test-12-alreadyplacednumber" class="anchor" href="#test-12-alreadyplacednumber" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 12: AlreadyPlacedNumber</h3>
+<p>Tests the functionality of placing a number
+when the user tries to place a number that has already been placed
+and the tried number is correct. Thus, the user will receive 0 point.</p>
+<h3>
+<a id="user-content-test-13-placecorrectnumber" class="anchor" href="#test-13-placecorrectnumber" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 13: PlaceCorrectNumber</h3>
+<p>Tests the functionality of placing a number
+when the user tries to place a number and the number is correct, which means that
+the user will earn 1 point. Other users will be notified, so it tests that
+all users who have joined the game have the new number in the grid of the game maintaining the grid consistent.</p>
+<h3>
+<a id="user-content-test-14-placeincorrectnumber" class="anchor" href="#test-14-placeincorrectnumber" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 14: PlaceIncorrectNumber</h3>
+<p>Tests the functionality of placing a number
+when the user tries to place a number and the number is incorrect, which results
+in the user losing 1 point.</p>
+<h3>
+<a id="user-content-test-15-alreadyplacednumberbutincorrect" class="anchor" href="#test-15-alreadyplacednumberbutincorrect" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 15: AlreadyPlacedNumberButIncorrect</h3>
+<p>Tests the functionality of placing a number
+when the user tries to place a number that has already been placed,
+but the tried number is incorrect. Thus, the user will lose 1 point.</p>
+<h3>
+<a id="user-content-test-16-placenumberinnotjoinedgame" class="anchor" href="#test-16-placenumberinnotjoinedgame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 16: PlaceNumberInNotJoinedGame</h3>
+<p>Tests that users cannot place a number in a game that they have yet to join.</p>
+<h3>
+<a id="user-content-test-17-placenumberinnotexistinggame" class="anchor" href="#test-17-placenumberinnotexistinggame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 17: PlaceNumberInNotExistingGame</h3>
+<p>Checks that users cannot place a number in a game that does not exist.</p>
+<h3>
+<a id="user-content-test-results" class="anchor" href="#test-results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test results</h3>
+<p>In order to run tests, run the following command:</p>
+<div class="highlight highlight-source-shell"><pre>mvn <span class="pl-c1">test</span></pre></div>
+<p>Here are the results:</p>
+<p><a href="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Results.png" target="_blank" rel="noopener noreferrer"><img src="/Users/tizianocitro/IntellijIdea/SudokuP2P/media/Results.png" style="max-width:100%;"></a></p>
+<h2>
+<a id="user-content-containerization" class="anchor" href="#containerization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Containerization</h2>
+<p>The application is provided with a <code>Dockerfile</code> that allows to build an image from which it becomes possible
+to launch a container with the application up and running.</p>
+<p>Here's the Dockerfile:</p>
+<div class="highlight highlight-source-dockerfile"><pre><span class="pl-k">FROM</span> maven:3.5-jdk-8-alpine AS build
+<span class="pl-k">COPY</span> src /app/src
+<span class="pl-k">COPY</span> pom.xml /app/pom.xml
+<span class="pl-k">WORKDIR</span> /app
+<span class="pl-k">RUN</span> mvn clean package
+
+<span class="pl-k">FROM</span> openjdk:8-jre-alpine
+<span class="pl-k">WORKDIR</span> /app
+<span class="pl-k">COPY</span> --from=build /app/target/SudokuP2P-1-jar-with-dependencies.jar /app/SudokuP2P.jar
+<span class="pl-k">ENV</span> MASTERIP=127.0.0.1
+<span class="pl-k">ENV</span> ID=0
+<span class="pl-k">CMD</span> java -jar SudokuP2P.jar -m $MASTERIP -id $ID</pre></div>
+<h3>
+<a id="user-content-launch-the-application-with-docker" class="anchor" href="#launch-the-application-with-docker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Launch the application with Docker</h3>
+<p>Make sure you have Docker started and then digit the following command from the root of the project, where the Dockerfile is located:</p>
+<div class="highlight highlight-source-shell"><pre>docker build --no-cache -t sudoku-p2p <span class="pl-c1">.</span></pre></div>
+<p>When the build process finishes, run the following command to start a container with the <code>MASTER</code> peer:</p>
+<div class="highlight highlight-source-shell"><pre>docker run -i --name MASTER-PEER -e MASTERIP=<span class="pl-s"><span class="pl-pds">"</span>127.0.0.1<span class="pl-pds">"</span></span> -e ID=0 sudoku-p2p</pre></div>
+<p>And then run the following command to start a second peer (we are calling it <code>PEER-ONE</code>):</p>
+<div class="highlight highlight-source-shell"><pre>docker run -i --name PEER-ONE -e MASTERIP=<span class="pl-s"><span class="pl-pds">"</span>172.17.0.2<span class="pl-pds">"</span></span> -e ID=1 sudoku-p2p</pre></div>
+<p>Now you should be able to interact with the application and follow along with what we have done through the documentation, for example.</p>
+</article></body></html>

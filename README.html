@@ -1307,6 +1307,42 @@ but the tried number is incorrect. Thus, the user will lose 1 point.</p>
 <a id="user-content-test-17-placenumberinnotexistinggame" class="anchor" href="#test-17-placenumberinnotexistinggame" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 17: PlaceNumberInNotExistingGame</h3>
 <p>Checks that users cannot place a number in a game that does not exist.</p>
 <h3>
+<a id="user-content-test-18-generatenewsudokuwithemptyname" class="anchor" href="#test-18-generatenewsudokuwithemptyname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 18: GenerateNewSudokuWithEmptyName</h3>
+<p>Tests that users cannot create a new game with an empty name.</p>
+<h3>
+<a id="user-content-test-19-joinsudokuwithemptyname" class="anchor" href="#test-19-joinsudokuwithemptyname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 19: JoinSudokuWithEmptyName</h3>
+<p>Tests that users cannot join when providing an empty name for the game.</p>
+<h3>
+<a id="user-content-test-20-joinsudokuwithoutnickname" class="anchor" href="#test-20-joinsudokuwithoutnickname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 20: JoinSudokuWithoutNickname</h3>
+<p>Tests that users cannot join a game without providing a nickname.</p>
+<h3>
+<a id="user-content-test-21-getsudokuwhitemptyname" class="anchor" href="#test-21-getsudokuwhitemptyname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 21: GetSudokuWhitEmptyName</h3>
+<p>Tests the possibility to retrieve a joined game grid by providing an empty name for the game.</p>
+<h3>
+<a id="user-content-test-22-placenumberinrowlowerthanmin" class="anchor" href="#test-22-placenumberinrowlowerthanmin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 22: PlaceNumberInRowLowerThanMin</h3>
+<p>Checks that users cannot place a number when specifying a wrong row index,
+lower than the minimum possible. In our case the minimum is 1.</p>
+<h3>
+<a id="user-content-test-23-placenumberinrowhigherthanmax" class="anchor" href="#test-23-placenumberinrowhigherthanmax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 23: PlaceNumberInRowHigherThanMax</h3>
+<p>Checks that users cannot place a number when specifying a wrong row index,
+higher than the maximum possible. In our case the maximum is 9.</p>
+<h3>
+<a id="user-content-test-24-placenumberincolumnlowerthanmin" class="anchor" href="#test-24-placenumberincolumnlowerthanmin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 24: PlaceNumberInColumnLowerThanMin</h3>
+<p>Checks that users cannot place a number when specifying a wrong column index,
+lower than the minimum possible. In our case the minimum is 1.</p>
+<h3>
+<a id="user-content-test-25-placenumberincolumnhigherthanmax" class="anchor" href="#test-25-placenumberincolumnhigherthanmax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 25: PlaceNumberInColumnHigherThanMax</h3>
+<p>Checks that users cannot place a number when specifying a wrong column index,
+higher than the maximum possible. In our case the maximum is 9.</p>
+<h3>
+<a id="user-content-test-26-placenumberlowerthanmin" class="anchor" href="#test-26-placenumberlowerthanmin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 26: PlaceNumberLowerThanMin</h3>
+<p>Tests that users cannot place a number when specifying a number
+lower than the minimum possible., with the minimum being 1.</p>
+<h3>
+<a id="user-content-test-27-placenumberhigherthanmax" class="anchor" href="#test-27-placenumberhigherthanmax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test 27: PlaceNumberHigherThanMax</h3>
+<p>Tests that users cannot place a number when specifying a number
+higher than the maximum possible, with the maximum being 9.</p>
+<h3>
 <a id="user-content-test-results" class="anchor" href="#test-results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test results</h3>
 <p>In order to run tests, run the following command:</p>
 <div class="highlight highlight-source-shell"><pre>mvn <span class="pl-c1">test</span></pre></div>

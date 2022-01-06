@@ -362,6 +362,42 @@ Tests that users cannot place a number in a game that they have yet to join.
 ### Test 17: PlaceNumberInNotExistingGame
 Checks that users cannot place a number in a game that does not exist.
 
+### Test 18: GenerateNewSudokuWithEmptyName
+Tests that users cannot create a new game with an empty name.
+
+### Test 19: JoinSudokuWithEmptyName
+Tests that users cannot join when providing an empty name for the game.
+
+### Test 20: JoinSudokuWithoutNickname
+Tests that users cannot join a game without providing a nickname.
+
+### Test 21: GetSudokuWhitEmptyName
+Tests the possibility to retrieve a joined game grid by providing an empty name for the game.
+
+### Test 22: PlaceNumberInRowLowerThanMin
+Checks that users cannot place a number when specifying a wrong row index,
+lower than the minimum possible. In our case the minimum is 1.
+
+### Test 23: PlaceNumberInRowHigherThanMax
+Checks that users cannot place a number when specifying a wrong row index,
+higher than the maximum possible. In our case the maximum is 9.
+
+### Test 24: PlaceNumberInColumnLowerThanMin
+Checks that users cannot place a number when specifying a wrong column index,
+lower than the minimum possible. In our case the minimum is 1.
+
+### Test 25: PlaceNumberInColumnHigherThanMax
+Checks that users cannot place a number when specifying a wrong column index,
+higher than the maximum possible. In our case the maximum is 9.
+
+### Test 26: PlaceNumberLowerThanMin
+Tests that users cannot place a number when specifying a number 
+lower than the minimum possible., with the minimum being 1.
+
+### Test 27: PlaceNumberHigherThanMax
+Tests that users cannot place a number when specifying a number
+higher than the maximum possible, with the maximum being 9.
+
 ### Test results
 In order to run tests, run the following command:
 
